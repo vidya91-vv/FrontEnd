@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>document</title>
+  </head>
+  <body>
+    <script>
+      class onlineDmart{
+        constructor(){
+          console.log("A class constructor");
+        }
+        paymentGateWayCreditcard()
+        {
+          console.log("OnlineDmart-Payment will be procced with choosen option credit card");
+        }
+      }
+      class onlineDmartV1 extends OnlinDmart{
+        paymentGateWayDebitcard(){
+          console.log("Payment will be processed with choosen option credit card");
+        }
+        olderPaymentWithCreditCard(){
+          super.paymentGateWayCreditcard()
+        }
+        paymentGateWayCreditcard(){
+            console.log("OnlinDmartV1-New Processed with choosen option credit card");
+            }
+      }
+      var onlineDmart=new onlineDmartV1();
+      onlineDmart.paymentGateWayCreditcard();
+      onlineDmart.olderPaymentWithCreditCard();
+    </script>
+  </body>
+</html>
